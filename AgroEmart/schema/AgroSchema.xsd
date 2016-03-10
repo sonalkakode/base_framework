@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+	jaxb:version="2.0"> 
+	
+	<xsd:complexType name="itemType">
+    	<xsd:sequence>
+    		<xsd:element name="itemId" type="xsd:int"></xsd:element>
+    		<xsd:element name="type" type="xsd:string"></xsd:element>
+    		<xsd:element name="name" type="xsd:string"></xsd:element>
+    		<xsd:element name="description" type="xsd:string"></xsd:element>
+    		<xsd:element name="units" type="xsd:string"></xsd:element>
+    		<xsd:element name="quantity" type="xsd:int"></xsd:element>
+    		<xsd:element name="basePrice" type="xsd:string"></xsd:element>
+    		<xsd:element name="bidPrice" type="xsd:string"></xsd:element>
+    		<xsd:element name="sellByDate" type="xsd:string"></xsd:element>
+    		<xsd:element name="isSold" type="xsd:boolean"></xsd:element>
+    		<xsd:element name="imgLink" type="xsd:string"></xsd:element>
+    		<xsd:element name="maxExpectedPrice" type="xsd:string"></xsd:element>
+    		<xsd:element name="auctionStartDateTime" type="xsd:string"></xsd:element>
+    		<xsd:element name="auctionEndDateTime" type="xsd:string"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType> 
+    
+    <xsd:complexType name="itemListType">
+    	<xsd:sequence>
+    		<xsd:element name="item" type="itemType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+     <xsd:complexType name="farmerType">
+    	<xsd:sequence>
+    		<xsd:element name="farmerId" type="xsd:int"></xsd:element>
+    		<xsd:element name="name" type="xsd:string"></xsd:element>
+    		<xsd:element name="contactNo" type="xsd:string"></xsd:element>
+    		<xsd:element name="location" type="xsd:string"></xsd:element>
+		    <xsd:element name="items" type="itemListType"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="vendorType">
+    	<xsd:sequence>
+    		<xsd:element name="vendorId" type="xsd:int"></xsd:element>
+    		<xsd:element name="name" type="xsd:string"></xsd:element>
+    		<xsd:element name="contactNo" type="xsd:string"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType> 
+    
+    <xsd:complexType name="biddingHistoryListType">
+    	<xsd:sequence>
+    		<xsd:element name="biddingHistory" type="biddingHistoryType" maxOccurs="unbounded" minOccurs="0"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="biddingHistoryType">
+    	<xsd:sequence>
+    		<xsd:element name="itemId" type="xsd:int"></xsd:element>
+    		<xsd:element name="farmerId" type="xsd:int"></xsd:element>
+    		<xsd:element name="vendorId" type="xsd:int"></xsd:element>
+    		<xsd:element name="bidPrice" type="xsd:string"></xsd:element>
+    		<xsd:element name="bidDateTime" type="xsd:string"></xsd:element>
+    		<xsd:element name="units" type="xsd:string"></xsd:element>
+    		<xsd:element name="quantity" type="xsd:int"></xsd:element>
+    	</xsd:sequence>
+    </xsd:complexType>
+
+	<xsd:element name="Item" type="itemType"></xsd:element>
+   	<xsd:element name="Items" type="itemListType"></xsd:element>
+   	<xsd:element name="Farmer" type="farmerType"></xsd:element>
+   	<xsd:element name="Vendor" type="vendorType"></xsd:element>
+   	<xsd:element name="BiddingHistory" type="biddingHistoryType"></xsd:element>
+    
+</xsd:schema>

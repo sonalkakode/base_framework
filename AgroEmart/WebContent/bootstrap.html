@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>TA</title>
+
+<!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+<link rel="stylesheet" type="text/css" id="theme"
+	href="css/watson-bootstrap-dark.css" />
+<link rel="stylesheet" type="text/css" id="theme" href="css/banner.css" />
+<link rel="stylesheet" type="text/css" id="theme" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/c3/c3.css"
+	media="screen">
+<!-- EOF CSS INCLUDE -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript"
+	src="http://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js"></script>
+<!-- <script type="text/javascript"
+	src="js/TradeoffAnalytics.js"></script> -->
+<script type="text/javascript" src="js/visualization.js"></script>
+
+</head>
+<body>
+	<h1>Tradeoff Analysis!</h1>
+	<button type="button" class="btn btn-info btn-lg"  data-toggle="modal"
+		data-target="#myModal">Show trend</button>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal" role="dialog">
+		<div class="modal-dialog modal-lg">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Trend Analysis</h4>
+				</div>
+				<div class="modal-body">
+					<div id='taWidgetContainer'></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
