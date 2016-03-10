@@ -11,6 +11,7 @@ package org.agromart.container.api.schema;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -65,6 +66,7 @@ import javax.xml.bind.annotation.XmlType;
     "createdDate",
     "modifiedDate"
 })
+@XmlRootElement
 public class ItemType {
 
     protected int itemId;
